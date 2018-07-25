@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular</title>
+	<script src="assets\angular.min.js"></script>
+	<script src="assets\angular-animate.min.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app='myModule'>
+	<center>
+		<div class="box container" ng-controller='MyController'>
+	
+		<h1>&nbsp;&nbsp;To Do List&nbsp;&nbsp;</h1>
+
+		<input type="text" name="task" size="100" class="textbox" placeholder="     Enter You New Task..." ng-model="newTask">
+		<input type="button" name="Add" value="Add Task" class="button" ng-click="add()">
+		<br>
+
+		<br>
+		<br>
+		
+		<br>
+
+		<ul id="#taskList" type="none" >
+			<li ng-repeat="task in tasks" style="font-size: 2em;" class="list">
+				<hr>
+			{{task}}<span class="remove"><b style="color: red;" ng-click="remove(task)">X</b></span>
+		</li>
+		</ul>
+		<a href="#" ng-click="removeAll()"> Remove All</a>
+
+</div>
+
+	</center>
+
+
+</body>
+</html>
